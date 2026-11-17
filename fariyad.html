@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>જન ફરિયાદ નિવારણ પ્રણાલી (CPRMS) | ગોપાલ ઇટાલિયા - વિસાવદર</title>
+  
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, and Noto Sans Gujarati -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans Gujarati', 'Inter', sans-serif;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eff4ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #8fa7fe;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4059aa;
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#d3e4fe",
+            "on-secondary-fixed-variant": "#264191",
+            "on-surface": "#0b1c30",
+            "surface-container-highest": "#d3e4fe",
+            "inverse-surface": "#213145",
+            "on-primary-fixed-variant": "#3f465c",
+            "inverse-on-surface": "#eaf1ff",
+            "background": "#f8f9ff",
+            "on-secondary-container": "#1d3989",
+            "primary-container": "#131b2e",
+            "on-primary-container": "#7c839b",
+            "surface-container-low": "#eff4ff",
+            "on-error-container": "#93000a",
+            "surface": "#f8f9ff",
+            "surface-bright": "#f8f9ff",
+            "on-tertiary-container": "#e45405",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed": "#370e00",
+            "on-primary": "#ffffff",
+            "secondary": "#4059aa",
+            "on-secondary-fixed": "#00164e",
+            "on-background": "#0b1c30",
+            "secondary-fixed-dim": "#b6c4ff",
+            "surface-container-lowest": "#ffffff",
+            "outline": "#76777d",
+            "inverse-primary": "#bec6e0",
+            "primary-fixed-dim": "#bec6e0",
+            "primary": "#000000",
+            "on-error": "#ffffff",
+            "surface-container": "#e5eeff",
+            "surface-tint": "#565e74",
+            "surface-container-high": "#dce9ff",
+            "tertiary": "#000000",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#370e00",
+            "on-primary-fixed": "#131b2e",
+            "surface-dim": "#cbdbf5",
+            "secondary-fixed": "#dce1ff",
+            "primary-fixed": "#dae2fd",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#8fa7fe",
+            "on-surface-variant": "#45464d",
+            "on-tertiary-fixed-variant": "#7f2b00",
+            "tertiary-fixed-dim": "#ffb599",
+            "outline-variant": "#c6c6cd",
+            "tertiary-fixed": "#ffdbce",
+            "on-tertiary": "#ffffff"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-md": "1rem"
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans Gujarati", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "Noto Sans Gujarati", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "Noto Sans Gujarati", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "Noto Sans Gujarati", "sans-serif"],
+            "body-lg": ["Inter", "Noto Sans Gujarati", "sans-serif"],
+            "body-md": ["Inter", "Noto Sans Gujarati", "sans-serif"],
+            "body-sm": ["Inter", "Noto Sans Gujarati", "sans-serif"],
+            "label-lg": ["Inter", "Noto Sans Gujarati", "sans-serif"],
+            "label-md": ["Inter", "Noto Sans Gujarati", "sans-serif"],
+            "label-sm": ["Inter", "Noto Sans Gujarati", "sans-serif"]
+          },
+          fontSize: {
+            "display": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["19px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased transition-all">
+
+  <!-- ======================================================== -->
+  <!-- 1. OFFICIAL GLOBAL HEADER                                -->
+  <!-- ======================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_2px_12px_rgba(11,28,48,0.06)] border-b border-surface-container">
+    
+    <!-- Top Civic Government Ribbon (Desktop) -->
+    <div class="bg-primary-container text-inverse-on-surface px-4 sm:px-8 py-1.5 hidden md:block">
+      <div class="max-w-7xl mx-auto flex items-center justify-between font-label-sm text-label-sm">
+        <div class="flex items-center gap-6">
+          <span class="flex items-center gap-1.5 text-surface-container-high">
+            <span class="material-symbols-outlined text-[15px] text-on-tertiary-container">call</span>
+            સહાયતા હેલ્પલાઇન: <strong class="text-inverse-on-surface font-semibold">1800-233-5500</strong> (ટોલ ફ્રી)
+          </span>
+          <span class="flex items-center gap-1.5 text-on-primary-container">
+            <span class="material-symbols-outlined text-[15px]">schedule</span>
+            સોમ - શનિ: ૦૯:૦૦ થી ૧૮:૦૦ (વિસાવદર &amp; ભેસાણ કાર્યાલય)
+          </span>
+        </div>
+        
+        <div class="flex items-center gap-5">
+          <!-- Accessible Font Sizing -->
+          <div class="flex items-center gap-1 bg-inverse-surface/80 rounded px-2 py-0.5 text-on-primary-container">
+            <span class="text-[10px] mr-1 text-surface-variant">ફોન્ટ:</span>
+            <button class="hover:text-inverse-on-surface px-1 font-bold transition-colors" onclick="changeFontSize(-1)" title="નાના અક્ષરો" type="button">A-</button>
+            <button class="hover:text-inverse-on-surface px-1 font-bold transition-colors" onclick="changeFontSize(0)" title="સામાન્ય અક્ષરો" type="button">A</button>
+            <button class="hover:text-inverse-on-surface px-1 font-bold transition-colors" onclick="changeFontSize(1)" title="મોટા અક્ષરો" type="button">A+</button>
+          </div>
+
+          <!-- Language Selector -->
+          <div class="flex items-center bg-inverse-surface rounded px-1.5 py-0.5 gap-1">
+            <span class="bg-on-tertiary-container text-on-tertiary px-1.5 py-0.5 rounded text-[10px] font-bold">ગુજરાતી</span>
+            <button class="text-on-primary-container hover:text-inverse-on-surface text-[10px] px-1 transition-colors" onclick="showLangNotice('English')" type="button">English</button>
+            <button class="text-on-primary-container hover:text-inverse-on-surface text-[10px] px-1 transition-colors" onclick="showLangNotice('हिंदी')" type="button">हिंदी</button>
+          </div>
+
+          <!-- Citizen Login Trigger -->
+          <button class="flex items-center gap-1 text-tertiary-fixed hover:text-surface-lowest transition-colors font-medium" onclick="openLoginModal()" type="button">
+            <span class="material-symbols-outlined text-[15px]">login</span>
+            નાગરિક લૉગિન
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Identity & Fast Action Bar -->
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Representative Title -->
+      <a class="flex items-center gap-3.5 group" href="home.html">
+        <img alt="ગોપાલ ઇટાલિયા - વિસાવદર પોર્ટલ લોગો" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ALJJyrACchNiFHDkLHAOS03AU63us06JtWUkkcoEe4cIoY6zITjL-pXKGlMYm3X8qsMNyxPXeIuhwuomjWHP0OGTkLUnUjFMhPZZMnRCDOt5urHDvT6mNIX_6ULpLWTs9wJrOmXl1CuY_4f_VygH2uZBp7WWwPSH4jbRB_28VHvSmsNXk_EbukiOkWkYtN28zkcmoyOzVSBpB3ufMjP506z8iRbiUQ3skgssdVkwBdfLeU1YGw"/>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-headline-md text-headline-md text-on-surface leading-tight font-extrabold group-hover:text-secondary transition-colors">ગોપાલ ઇટાલિયા</span>
+            <span class="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-surface-container-highest text-on-secondary-container">
+              <span class="material-symbols-outlined text-[12px] text-secondary">verified</span> સત્તાવાર
+            </span>
+          </div>
+          <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">વિસાવદર વિધાનસભા મતવિસ્તાર (#૮૭) - જન સેવા પોર્ટલ</span>
+        </div>
+      </a>
+
+      <!-- Header Action Buttons -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a class="hidden sm:inline-flex items-center justify-center bg-on-tertiary-container hover:bg-tertiary-container text-on-tertiary px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl font-label-md text-label-md font-semibold transition-all shadow-sm hover:shadow active:scale-95 gap-1.5" href="fariyad.html">
+          <span class="material-symbols-outlined text-[18px]">edit_document</span>
+          <span>ફરિયાદ નોંધાવો</span>
+        </a>
+        <a class="hidden md:inline-flex items-center justify-center bg-primary-container hover:bg-inverse-surface text-inverse-on-surface px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl font-label-md text-label-md font-semibold transition-all shadow-sm hover:shadow active:scale-95 gap-1.5" href="appointment.html">
+          <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+          <span>મુલાકાત બુક કરો</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button aria-label="મેનુ ખોલો" class="lg:hidden p-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant transition-colors flex items-center justify-center" onclick="toggleMobileMenu()" type="button">
+          <span class="material-symbols-outlined text-[26px]" id="mobile-menu-icon">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Desktop Horizontal Navigation Menu -->
+    <div class="bg-surface-container-low border-t border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <nav class="flex items-center gap-1 sm:gap-2 overflow-x-auto py-1 font-label-md text-label-md whitespace-nowrap scrollbar-none">
+          <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container py-2 px-3 rounded-lg transition-colors flex items-center gap-1.5" href="home.html">
+            <span class="material-symbols-outlined text-[16px]">home</span>
+            <span>મુખપૃષ્ઠ</span>
+          </a>
+          <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container py-2 px-3 rounded-lg transition-colors flex items-center gap-1.5" href="about.html">
+            <span class="material-symbols-outlined text-[16px]">person</span>
+            <span>પરિચય</span>
+          </a>
+          <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container py-2 px-3 rounded-lg transition-colors flex items-center gap-1.5" href="development-works.html">
+            <span class="material-symbols-outlined text-[16px]">analytics</span>
+            <span>વિકાસ કાર્યો</span>
+          </a>
+          <a class="transition-all py-2 px-3 rounded-lg text-on-tertiary-container font-bold bg-surface-container-lowest shadow-sm flex items-center gap-1.5 border-b-2 border-on-tertiary-container" href="fariyad.html">
+            <span class="material-symbols-outlined text-[16px]">report_problem</span>
+            <span>જન ફરિયાદ નિવારણ</span>
+          </a>
+          <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container py-2 px-3 rounded-lg transition-colors flex items-center gap-1.5" href="appointment.html">
+            <span class="material-symbols-outlined text-[16px]">handshake</span>
+            <span>રૂબરૂ મુલાકાત / એપોઇન્ટમેન્ટ</span>
+          </a>
+          <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container py-2 px-3 rounded-lg transition-colors flex items-center gap-1.5" href="village-directory.html">
+            <span class="material-symbols-outlined text-[16px]">holiday_village</span>
+            <span>ગામ ડિરેક્ટરી</span>
+          </a>
+          <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container py-2 px-3 rounded-lg transition-colors flex items-center gap-1.5" href="news-and-media.html">
+            <span class="material-symbols-outlined text-[16px]">newspaper</span>
+            <span>સમાચાર અને મીડિયા</span>
+          </a>
+          <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container py-2 px-3 rounded-lg transition-colors flex items-center gap-1.5" href="suggestion-box.html">
+            <span class="material-symbols-outlined text-[16px]">lightbulb</span>
+            <span>સૂચન પેટી</span>
+          </a>
+          <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container py-2 px-3 rounded-lg transition-colors flex items-center gap-1.5" href="contact.html">
+            <span class="material-symbols-outlined text-[16px]">contact_support</span>
+            <span>સંપર્ક</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer / Slide-out Menu -->
+    <div class="hidden lg:hidden bg-surface-container-lowest border-b border-surface-container px-4 py-4 shadow-xl" id="mobileMenuDrawer">
+      <div class="flex flex-col gap-1.5 font-label-md text-label-md">
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" href="home.html">
+          <span class="material-symbols-outlined text-[20px]">home</span> મુખપૃષ્ઠ (Home)
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" href="about.html">
+          <span class="material-symbols-outlined text-[20px]">person</span> ધારાસભ્ય પરિચય (About)
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" href="development-works.html">
+          <span class="material-symbols-outlined text-[20px]">analytics</span> વિકાસ કાર્યો (Development Works)
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-surface-container font-bold text-on-tertiary-container" href="fariyad.html">
+          <span class="material-symbols-outlined text-[20px]">report_problem</span> જન ફરિયાદ નિવારણ (Grievances)
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" href="appointment.html">
+          <span class="material-symbols-outlined text-[20px]">handshake</span> મુલાકાત / એપોઇન્ટમેન્ટ (Meeting)
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" href="village-directory.html">
+          <span class="material-symbols-outlined text-[20px]">holiday_village</span> ગામ ડિરેક્ટરી (Village Directory)
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" href="news-and-media.html">
+          <span class="material-symbols-outlined text-[20px]">newspaper</span> સમાચાર &amp; મીડિયા (News &amp; Media)
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" href="suggestion-box.html">
+          <span class="material-symbols-outlined text-[20px]">lightbulb</span> જન સૂચન પેટી (Suggestions)
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" href="contact.html">
+          <span class="material-symbols-outlined text-[20px]">contact_support</span> સંપર્ક &amp; કાર્યાલય (Contact)
+        </a>
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-surface-container flex flex-col gap-2">
+        <a class="w-full py-2.5 px-4 rounded-xl bg-on-tertiary-container text-on-tertiary font-bold flex items-center justify-center gap-2" href="fariyad.html">
+          <span class="material-symbols-outlined text-[20px]">edit_document</span> નવી ફરિયાદ નોંધાવો
+        </a>
+        <a class="w-full py-2.5 px-4 rounded-xl bg-primary-container text-inverse-on-surface font-bold flex items-center justify-center gap-2" href="appointment.html">
+          <span class="material-symbols-outlined text-[20px]">calendar_month</span> મુલાકાત બુક કરો
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- 2. MAIN CPRMS CONTENT                                    -->
+  <!-- ======================================================== -->
+  <main class="w-full pt-28 sm:pt-32 bg-background min-h-[calc(100vh-280px)]">
+    <div class="flex flex-col w-full">
+
+      <!-- Breadcrumbs & Status Flag Bar -->
+      <div class="w-full bg-gradient-to-b from-surface-container-low via-background to-background py-8 px-4 sm:px-8 border-b border-surface-container relative overflow-hidden">
+        <div class="absolute -top-24 right-10 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-20 w-80 h-80 bg-surface-variant/40 rounded-full blur-2xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+          
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+            <div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+              <a class="hover:text-on-surface flex items-center gap-1 font-semibold transition-colors" href="home.html">
+                <span class="material-symbols-outlined text-[16px]">home</span>
+                મુખપૃષ્ઠ
+              </a>
+              <span class="text-outline">/</span>
+              <span class="text-on-tertiary-container font-bold">જન ફરિયાદ નિવારણ પ્રણાલી (CPRMS)</span>
+            </div>
+            <div class="inline-flex items-center gap-2 bg-surface-container-lowest px-3.5 py-1.5 rounded-full shadow-sm border border-surface-container">
+              <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="font-label-sm text-label-sm text-on-surface font-semibold">સત્તાવાર પોર્ટલ: દૈનિક રીઅલ-ટાઇમ નિવારણ સક્રિય</span>
+            </div>
+          </div>
+
+          <!-- Hero Statement & Emergency Help Card -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-8">
+            <!-- Left: Statement -->
+            <div class="lg:col-span-8 flex flex-col justify-between bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm border border-surface-container">
+              <div>
+                <div class="inline-flex items-center gap-1.5 bg-surface-container px-3 py-1 rounded-full text-secondary font-label-sm text-label-sm font-bold mb-3">
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">assured_workload</span>
+                  વિસાવદર-ભેંસાણ વિધાનસભા સીધી નાગરિક સહાય
+                </div>
+                <h1 class="font-headline-lg text-headline-lg md:text-display text-on-surface font-extrabold tracking-tight mb-2">
+                  જન ફરિયાદ નિવારણ કેન્દ્ર
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                  તમારી સમસ્યા સીધી ધારાસભ્ય કાર્યાલય સુધી પહોંચાડો. દરેક ફરિયાદની ઓનલાઈન નોંધણી, પારદર્શક ટ્રેકિંગ અને સંબંધિત સરકારી વિભાગો સાથે સીધું ફોલો-અપ.
+                </p>
+              </div>
+
+              <!-- Fast SLA Commitment Indicators -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 mt-6 bg-surface-container-low/50 -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 px-6 sm:px-8 py-4 rounded-b-2xl border-t border-surface-container">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-tertiary-container shadow-sm">
+                    <span class="material-symbols-outlined text-[22px]">sms</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">૧૦ મિનિટ</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">SMS/WhatsApp ટોકન</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+                    <span class="material-symbols-outlined text-[22px]">timer</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">૩.૪ દિવસ</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">સરેરાશ ઉકેલ સમય</span>
+                  </div>
+                </div>
+
+                <div class="col-span-2 sm:col-span-1 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-emerald-600 shadow-sm">
+                    <span class="material-symbols-outlined text-[22px]">verified</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">૧૦૦%</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">જવાબદેહી ખાતરી</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Urgent Helpdesk -->
+            <div class="lg:col-span-4 bg-primary-container text-on-primary p-6 sm:p-8 rounded-2xl flex flex-col justify-between shadow-md border border-inverse-surface relative overflow-hidden">
+              <div class="absolute -right-8 -bottom-8 opacity-10 pointer-events-none">
+                <span class="material-symbols-outlined text-[160px] text-surface-container-lowest">support_agent</span>
+              </div>
+              
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-label-md text-label-md text-tertiary-fixed font-bold tracking-wider uppercase">કટોકટી હેલ્પલાઇન</span>
+                  <span class="bg-surface-container-highest/20 text-inverse-on-surface px-2.5 py-0.5 rounded text-[11px] font-bold">૨૪x૭ સક્રિય</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-inverse-on-surface font-extrabold mb-1.5">
+                  અતિ તાકીદની રજૂઆત માટે
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-primary-container mb-4 leading-relaxed">
+                  વીજળી અકસ્માત, પીવાના પાણીની મુખ્ય પાઇપલાઇન બ્રેકડાઉન અથવા તાત્કાલિક રાહત સહાય માટે ડાયરેક્ટ સંપર્ક કરો.
+                </p>
+                <div class="bg-inverse-surface/90 p-3.5 rounded-xl mb-4 border border-inverse-surface">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-tertiary-fixed text-[26px]">ring_volume</span>
+                    <div>
+                      <span class="text-xs text-on-primary-container block">ટોલ ફ્રી સિટિઝન લાઈન</span>
+                      <a class="font-headline-sm text-headline-sm font-bold text-inverse-on-surface tracking-wide hover:underline" href="tel:18002335500">1800-233-5500</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-900 font-label-lg text-label-lg font-bold py-3 px-4 rounded-xl transition-all shadow-sm active:scale-95" href="https://wa.me/919426000000" rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                વોટ્સએપ હેલ્પડેસ્ક પર જોડાઓ
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Tab Navigator -->
+          <div class="w-full bg-surface-container-lowest rounded-2xl shadow-sm p-1.5 mb-8 flex flex-col sm:flex-row gap-1.5 border border-surface-container">
+            <button class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-headline-sm text-headline-sm transition-all bg-on-tertiary-container text-on-tertiary shadow-sm font-bold" id="tab-btn-register" onclick="switchGrievanceTab('register')" type="button">
+              <span class="material-symbols-outlined text-[22px]">note_add</span>
+              ૧. નવી ફરિયાદ નોંધાવો (Register Grievance)
+            </button>
+            <button class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-headline-sm text-headline-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-semibold" id="tab-btn-track" onclick="switchGrievanceTab('track')" type="button">
+              <span class="material-symbols-outlined text-[22px]">manage_search</span>
+              ૨. ફરિયાદ સ્થિતિ તપાસો (Track Complaint Status)
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MAIN TAB CONTENT AREA -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-8 pb-14 w-full">
+        
+        <!-- ============================================== -->
+        <!-- TAB 1: REGISTER GRIEVANCE FORM CONTAINER       -->
+        <!-- ============================================== -->
+        <div class="block w-full" id="grievance-panel-register">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- Left 8-Cols: Main Dynamic Form -->
+            <div class="lg:col-span-8 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm border border-surface-container">
+              
+              <!-- Form Instructions Banner -->
+              <div class="bg-surface-container-low rounded-xl p-4 mb-6 flex items-start gap-3 border border-surface-container">
+                <span class="material-symbols-outlined text-on-tertiary-container text-[24px] mt-0.5 shrink-0">info</span>
+                <div class="flex flex-col">
+                  <span class="font-headline-sm text-headline-sm text-on-surface font-bold">સહાયક સૂચના</span>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    તમારી સમસ્યા સીધી ધારાસભ્ય કાર્યાલય સુધી પહોંચાડો. ફરિયાદ નોંધાયા બાદ તમને SMS અને વોટ્સએપ દ્વારા યુનિક ફરિયાદ નંબર મોકલવામાં આવશે. (* વાળા ખાના ભરવા ફરજિયાત છે)
+                  </p>
+                </div>
+              </div>
+
+              <form class="space-y-6" id="grievanceForm" onsubmit="handleGrievanceSubmit(event)">
+                
+                <!-- Fieldset 1: Citizen Details -->
+                <div>
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold">૧</span>
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">નાગરિકની અંગત વિગતો (Citizen Details)</h2>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Full Name -->
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold" for="citizen-name">
+                        પૂરું નામ (Full Name) <span class="text-error">*</span>
+                      </label>
+                      <div class="relative">
+                        <input class="w-full bg-background text-on-surface placeholder:text-outline text-body-md font-body-md px-4 py-2.5 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary transition-all" id="citizen-name" placeholder="દા.ત. રમેશભાઈ ગોવિંદભાઈ પટેલ" required="" type="text"/>
+                        <span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px]">person</span>
+                      </div>
+                    </div>
+
+                    <!-- Mobile Number & OTP Verification Trigger -->
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold" for="citizen-phone">
+                        મોબાઈલ નંબર (Mobile Number) <span class="text-error">*</span>
+                      </label>
+                      <div class="flex gap-2">
+                        <div class="relative flex-1">
+                          <input class="w-full bg-background text-on-surface placeholder:text-outline text-body-md font-body-md px-4 py-2.5 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary transition-all" id="citizen-phone" maxlength="10" pattern="[0-9]{10}" placeholder="૧૦ અંકનો નંબર" required="" type="tel"/>
+                          <span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px]">call</span>
+                        </div>
+                        <button class="shrink-0 bg-surface-container hover:bg-surface-variant text-on-secondary-fixed-variant px-3.5 py-2.5 rounded-xl font-label-md text-label-md font-bold transition-colors flex items-center gap-1 border border-surface-container" onclick="sendOtpNotice()" type="button">
+                          <span class="material-symbols-outlined text-[16px]">verified</span>
+                          OTP
+                        </button>
+                      </div>
+                      <span class="font-label-sm text-label-sm text-outline mt-0.5" id="otp-help-text">તમારો મોબાઇલ નંબર SMS સ્ટેટસ અપડેટ્સ માટે ઉપયોગમાં લેવાશે.</span>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold" for="citizen-email">
+                        ઈમેલ એડ્રેસ (Email Address - વૈકલ્પિક)
+                      </label>
+                      <div class="relative">
+                        <input class="w-full bg-background text-on-surface placeholder:text-outline text-body-md font-body-md px-4 py-2.5 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary transition-all" id="citizen-email" placeholder="તમારું ઈમેલ (જો ઉપલબ્ધ હોય)" type="email"/>
+                        <span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px]">mail</span>
+                      </div>
+                    </div>
+
+                    <!-- Identity Proof Dropdown -->
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold" for="citizen-id-type">
+                        ઓળખપત્ર પુરાવો (ID Proof Type)
+                      </label>
+                      <div class="relative">
+                        <select class="w-full bg-background text-on-surface text-body-md font-body-md px-4 py-2.5 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary appearance-none transition-all pr-10" id="citizen-id-type">
+                          <option value="aadhaar">આધાર કાર્ડ (Aadhaar Card)</option>
+                          <option value="voter">ચૂંટણી કાર્ડ (Voter ID Card)</option>
+                          <option value="ration">રેશન કાર્ડ (Ration Card)</option>
+                          <option value="none">પુરાવો ઉપલબ્ધ નથી</option>
+                        </select>
+                        <span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px] pointer-events-none">expand_more</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fieldset 2: Location Details -->
+                <div class="pt-4 border-t border-surface-container">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold">૨</span>
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">વિસ્તાર અને સ્થળ વિગતો (Constituency Location)</h2>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Taluka Select -->
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold" for="taluka-select">
+                        તાલુકો (Taluka) <span class="text-error">*</span>
+                      </label>
+                      <div class="relative">
+                        <select class="w-full bg-background text-on-surface text-body-md font-body-md px-4 py-2.5 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary appearance-none transition-all pr-10" id="taluka-select" onchange="filterVillages(this.value)" required="">
+                          <option selected="" value="visavadar">વિસાવદર (Visavadar)</option>
+                          <option value="bhesan">ભેંસાણ (Bhesan)</option>
+                        </select>
+                        <span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px] pointer-events-none">expand_more</span>
+                      </div>
+                    </div>
+
+                    <!-- Village Dropdown -->
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold" for="village-select">
+                        ગામ / વોર્ડ પસંદ કરો (Village / Ward) <span class="text-error">*</span>
+                      </label>
+                      <div class="relative">
+                        <select class="w-full bg-background text-on-surface text-body-md font-body-md px-4 py-2.5 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary appearance-none transition-all pr-10" id="village-select" required="">
+                          <option value="">ગામ પસંદ કરો...</option>
+                          <option value="visavadar_city">વિસાવદર શહેર (Visavadar Proper)</option>
+                          <option selected="" value="moti_monpari">મોટી મોણપરી (Moti Monpari)</option>
+                          <option value="sarsai">સરસઈ (Sarsai)</option>
+                          <option value="chhelana">છેલાણા (Chhelana)</option>
+                          <option value="ravani">રાવણી (Ravani)</option>
+                          <option value="kalavad">કાલાવડ (ગિર) (Kalavad Gir)</option>
+                          <option value="dhareshwar">ધારેશ્વર (Dhareshwar)</option>
+                          <option value="other">અન્ય સીમ વિસ્તાર</option>
+                        </select>
+                        <span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px] pointer-events-none">expand_more</span>
+                      </div>
+                    </div>
+
+                    <!-- Locality / Street -->
+                    <div class="md:col-span-2 flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold" for="street-address">
+                        સોસાયટી / શેરી / વાસ / સીમ સરનામું (Street / Landmark) <span class="text-error">*</span>
+                      </label>
+                      <div class="relative">
+                        <input class="w-full bg-background text-on-surface placeholder:text-outline text-body-md font-body-md px-4 py-2.5 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary transition-all" id="street-address" placeholder="દા.ત. પટેલ વાડી સામે, રામ મંદિર ચોક, પ્લોટ વિસ્તાર" required="" type="text"/>
+                        <span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px]">location_on</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fieldset 3: Complaint Information -->
+                <div class="pt-4 border-t border-surface-container">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold">૩</span>
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">ફરિયાદનું સંપૂર્ણ વર્ણન (Complaint Details)</h2>
+                  </div>
+
+                  <div class="flex flex-col gap-4">
+                    <!-- Category Selector -->
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold" for="complaint-category">
+                        ફરિયાદ કેટેગરી (Complaint Department / Category) <span class="text-error">*</span>
+                      </label>
+                      <div class="relative">
+                        <select class="w-full bg-background text-on-surface text-body-md font-body-md px-4 py-2.5 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary appearance-none transition-all pr-10" id="complaint-category" required="">
+                          <option value="">સંબંધિત વિભાગ પસંદ કરો...</option>
+                          <option value="roads">🛣️ રસ્તા અને પરિવહન (Roads &amp; Transport)</option>
+                          <option value="water">🚰 પીવાનું પાણી અને ફિલ્ટર લાઇન (Drinking Water)</option>
+                          <option selected="" value="electricity">⚡ વીજળી સમસ્યા &amp; ટ્રાન્સફોર્મર (PGVCL Power Supply)</option>
+                          <option value="health">🏥 સરકારી હોસ્પિટલ / આરોગ્ય કેન્દ્ર (Healthcare/PHC)</option>
+                          <option value="education">🏫 પ્રાથમિક શાળા / શિક્ષણ (Primary Education)</option>
+                          <option value="drainage">🚯 ગટર, નાળા અને સ્વચ્છતા (Sanitation &amp; Drainage)</option>
+                          <option value="agriculture">🌾 ખેતીવાડી સહાય, કેનાલ &amp; પાક વીમો (Agriculture / Canal)</option>
+                          <option value="panchayat">🏛️ ગ્રામ પંચાયત વહીવટ (Gram Panchayat Administration)</option>
+                          <option value="other">📋 અન્ય રજૂઆત (Other Issues)</option>
+                        </select>
+                        <span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px] pointer-events-none">category</span>
+                      </div>
+                    </div>
+
+                    <!-- Subject line -->
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold" for="complaint-subject">
+                        ફરિયાદનો વિષય (Brief Subject) <span class="text-error">*</span>
+                      </label>
+                      <input class="w-full bg-background text-on-surface placeholder:text-outline text-body-md font-body-md px-4 py-2.5 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary transition-all" id="complaint-subject" placeholder="દા.ત. મોટી મોણપરી ગામે મુખ્ય વીજ ટ્રાન્સફોર્મર 3 દિવસથી બંધ છે" required="" type="text"/>
+                    </div>
+
+                    <!-- Description Textarea -->
+                    <div class="flex flex-col gap-1">
+                      <div class="flex justify-between items-center">
+                        <label class="font-label-md text-label-md text-on-surface font-semibold" for="complaint-description">
+                          વિગતવાર રજૂઆત (Detailed Description) <span class="text-error">*</span>
+                        </label>
+                        <span class="font-label-sm text-label-sm text-outline" id="char-counter">0 / 800 અક્ષરો</span>
+                      </div>
+                      <textarea class="w-full bg-background text-on-surface placeholder:text-outline text-body-md font-body-md p-4 rounded-xl outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary transition-all resize-y" id="complaint-description" maxlength="800" oninput="updateCharCount(this)" placeholder="સમસ્યા ક્યારથી છે? અગાઉ સ્થાનિક અધિકારીને જાણ કરી છે કે નહીં? તમામ સ્પષ્ટ વિગતો અહીં લખો..." required="" rows="4"></textarea>
+                    </div>
+
+                    <!-- File & Photo Drag-and-drop zone -->
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label-md text-label-md text-on-surface font-semibold">
+                        સ્થળના ફોટો / પુરાવાના દસ્તાવેજ અપલોડ કરો (Attach Photos / Documents)
+                      </label>
+                      <div class="group relative flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-2xl ring-2 ring-dashed ring-outline-variant hover:ring-secondary transition-colors cursor-pointer text-center">
+                        <input accept="image/*,.pdf,.doc" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" id="file-upload" multiple="" onchange="handleFileSelection(this)" type="file"/>
+                        <div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-tertiary-container shadow-sm mb-2 group-hover:scale-110 transition-transform">
+                          <span class="material-symbols-outlined text-[28px]">add_a_photo</span>
+                        </div>
+                        <span class="font-label-lg text-label-lg font-bold text-on-surface">ફોટો પસંદ કરવા ક્લિક કરો અથવા ડ્રેગ એન્ડ ડ્રોપ કરો</span>
+                        <span class="font-body-sm text-body-sm text-outline mt-0.5">તૂટેલા રસ્તા, ખુલ્લી ગટર, બળી ગયેલ ડીપી કે લેટર પેડનો ફોટો (JPG, PNG, PDF)</span>
+                        <div class="mt-2 flex flex-wrap gap-2 text-xs font-semibold text-secondary" id="file-list-preview"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fieldset 4: Declaration -->
+                <div class="p-4 bg-surface-container-low rounded-xl border border-surface-container">
+                  <label class="flex items-start gap-3 cursor-pointer select-none">
+                    <input class="w-5 h-5 rounded text-on-tertiary-container mt-0.5 focus:ring-on-tertiary-container cursor-pointer" required="" type="checkbox"/>
+                    <span class="font-body-sm text-body-sm text-on-surface leading-normal">
+                      <strong>હું ખાતરી આપું છું કે</strong> ઉપર જણાવેલી તમામ માહિતી મારી જાણ મુજબ સંપૂર્ણ સત્ય છે. આ રજૂઆત કોઈ અંગત દ્વેષભાવ વગર જાહેર હિત અથવા સાચી સમસ્યાના નિવારણ અર્થે કરવામાં આવી છે.
+                    </span>
+                  </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex flex-col sm:flex-row items-center gap-4 justify-between pt-2">
+                  <div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+                    <span class="material-symbols-outlined text-[18px] text-emerald-600">lock</span>
+                    ડેટા સુરક્ષિત SSL એન્ક્રિપ્શન દ્વારા સુરક્ષિત છે
+                  </div>
+                  <button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-on-tertiary-container hover:bg-tertiary-container text-on-tertiary font-headline-sm text-headline-sm font-bold py-3.5 px-8 rounded-xl transition-all shadow-md active:scale-95" type="submit">
+                    <span class="material-symbols-outlined text-[22px]">send</span>
+                    ફરિયાદ સબમિટ કરો (Submit Complaint)
+                  </button>
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Right 4-Cols: Helpful Context Sidebar -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+              
+              <!-- Support Team Card -->
+              <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container">
+                <div class="flex items-center gap-3 mb-4">
+                  <img alt="નાગરિક સહાયતા ટીમ" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChJHjjg5YNMeuwubEOZ42LD7iM-cSEJj8x9O7KWzxcg-X3mDPkR6XY-SKrTf68z5gJM0zVunG0egtaF4HDExruPPwxZpkid6uC6WuU7mStilviYMqKgdxj3lTIvhHMvS_UasVNroTlk0oAuyejiorwZnc7HW7HztyvaLa41_jyODghTAKL9kJMeAPyZJ0yDSQA3OvmvxsCdJvydCc0HxxrxEym3qxaWhyZoEWgsW7m"/>
+                  <div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">નાગરિક સહાયતા ટીમ</h3>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">વિસાવદર કચેરી કંટ્રોલ રૂમ</span>
+                  </div>
+                </div>
+                <div class="space-y-3 text-body-sm text-on-surface-variant">
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                    <span>ફરિયાદ નોંધાયા બાદ <strong>૨૪ કલાકમાં</strong> કચેરીના નોડલ અધિકારી દ્વારા ચકાસણી કરવામાં આવશે.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                    <span>જિલ્લા/તાલુકા પંચાયત, PGVCL અથવા પાણી પુરવઠા વિભાગને સત્તાવાર પત્ર લખીને ઝડપી ઉકેલ લવાશે.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                    <span>કામ પૂર્ણ થયેથી નાગરિકને સ્થળ પર ફોટો પુરાવા સાથે SMS મળશે.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Grievance Flow Process Mini Diagram -->
+              <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-4 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-on-tertiary-container">conversion_path</span>
+                  નિવારણ પ્રક્રિયાના ૪ તબક્કા
+                </h3>
+                <div class="relative pl-6 space-y-4">
+                  <div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-surface-container-highest"></div>
+                  
+                  <div class="relative flex items-start gap-3">
+                    <div class="absolute -left-6 w-5 h-5 rounded-full bg-secondary text-on-secondary text-[11px] font-bold flex items-center justify-center">૧</div>
+                    <div>
+                      <span class="font-label-md text-label-md text-on-surface font-bold block">ઓનલાઈન રજૂઆત</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">નાગરિક દ્વારા ફોર્મ સબમિટ અને યુનિક ટોકન જનરેટ.</span>
+                    </div>
+                  </div>
+
+                  <div class="relative flex items-start gap-3">
+                    <div class="absolute -left-6 w-5 h-5 rounded-full bg-secondary text-on-secondary text-[11px] font-bold flex items-center justify-center">૨</div>
+                    <div>
+                      <span class="font-label-md text-label-md text-on-surface font-bold block">કાર્યાલય ચકાસણી</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">વિસાવદર કચેરી ટીમ દ્વારા સ્થળ પર તથ્ય ચકાસણી.</span>
+                    </div>
+                  </div>
+
+                  <div class="relative flex items-start gap-3">
+                    <div class="absolute -left-6 w-5 h-5 rounded-full bg-secondary text-on-secondary text-[11px] font-bold flex items-center justify-center">૩</div>
+                    <div>
+                      <span class="font-label-md text-label-md text-on-surface font-bold block">વિભાગીય આદેશ</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">સંબંધિત સરકારી વિભાગને અધિકૃત આદેશ પત્ર.</span>
+                    </div>
+                  </div>
+
+                  <div class="relative flex items-start gap-3">
+                    <div class="absolute -left-6 w-5 h-5 rounded-full bg-emerald-600 text-on-primary text-[11px] font-bold flex items-center justify-center">૪</div>
+                    <div>
+                      <span class="font-label-md text-label-md text-on-surface font-bold block">સંતોષકારક ઉકેલ</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">કામગીરી પૂર્ણ થઈ નાગરિક ફીડબેક સાથે ક્લોઝર.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- TAB 2: TRACK EXISTING COMPLAINT STATUS PANEL   -->
+        <!-- ============================================== -->
+        <div class="hidden w-full space-y-6" id="grievance-panel-track">
+          
+          <!-- Search Box Form Container -->
+          <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm border border-surface-container max-w-4xl mx-auto">
+            <div class="text-center max-w-xl mx-auto mb-6">
+              <span class="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-widest block mb-1">લાઈવ અરજી ટ્રેકર</span>
+              <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">તમારી ફરિયાદની વર્તમાન સ્થિતિ તપાસો</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                ફરિયાદ નોંધણી સમયે પ્રાપ્ત થયેલ ટોકન નંબર અથવા રજિસ્ટર્ડ મોબાઈલ નંબર દાખલ કરો.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto">
+              <div class="relative flex-1">
+                <input class="w-full bg-background text-on-surface font-headline-sm text-headline-sm px-4 py-3 rounded-xl ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary uppercase tracking-wider outline-none pl-11" id="tracking-input" placeholder="દા.ત. VIS-2025-1042" type="text" value="VIS-2025-1042"/>
+                <span class="material-symbols-outlined absolute left-3.5 top-3.5 text-outline text-[22px]">search</span>
+              </div>
+              <button class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-on-secondary-container text-on-secondary font-headline-sm text-headline-sm font-bold py-3 px-6 rounded-xl transition-all shadow-sm active:scale-95" onclick="performTrackingSearch()" type="button">
+                <span class="material-symbols-outlined text-[20px]">manage_search</span>
+                તપાસો (Track)
+              </button>
+            </div>
+
+            <div class="text-center mt-3">
+              <span class="font-label-sm text-label-sm text-outline">
+                ડેમો જોવા માટે ટોકન નંબર <button class="text-on-tertiary-container font-bold underline" onclick="document.getElementById('tracking-input').value='VIS-2025-1042'; performTrackingSearch();" type="button">#VIS-2025-1042</button> અથવા <button class="text-secondary font-bold underline" onclick="document.getElementById('tracking-input').value='VIS-2025-0619'; performTrackingSearch();" type="button">#VIS-2025-0619</button> પર ક્લિક કરો.
+              </span>
+            </div>
+          </div>
+
+          <!-- TRACKING RESULT DISPLAY CARD (LIVE DEMO CASE) -->
+          <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm border border-surface-container" id="tracking-result-container">
+            
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-6 mb-6 bg-surface-container-low/50 -mx-6 sm:-mx-8 -mt-6 sm:-mt-8 p-6 sm:p-8 rounded-t-2xl border-b border-surface-container">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="font-headline-sm text-headline-sm font-extrabold text-on-surface" id="resTokenDisplay">ફરિયાદ ક્રમાંક: #VIS-2025-1042</span>
+                  <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">sync</span>
+                    પ્રગતિમાં છે (In Progress)
+                  </span>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 text-label-sm font-label-sm text-on-surface-variant font-medium">
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                    નોંધણી તારીખ: ૦૪ માર્ચ ૨૦૨૫ (સવારે ૧૦:૨૪)
+                  </span>
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px]">pin_drop</span>
+                    સરસાઈ ગામ, તાલુકો: વિસાવદર
+                  </span>
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px]">bolt</span>
+                    કેટેગરી: વીજળી અને PGVCL
+                  </span>
+                </div>
+              </div>
+
+              <button class="inline-flex items-center gap-1.5 text-label-md font-label-md bg-surface-container hover:bg-surface-variant text-on-surface px-4 py-2.5 rounded-xl transition-colors font-semibold border border-surface-container" onclick="window.print()" type="button">
+                <span class="material-symbols-outlined text-[18px]">print</span>
+                પ્રિન્ટ પહોંચ
+              </button>
+            </div>
+
+            <!-- Subject & Summary -->
+            <div class="mb-6">
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">
+                વિષય: સરસાઈ ગામે ખેતીવાડી મુખ્ય વીજ ટ્રાન્સફોર્મર બળી ગયેલ હોવાથી વીજળી પુરવઠો ખોરવાયો
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                અરજદાર રમેશભાઈ ગોવિંદભાઈ પટેલ (મો. ૯૮૯૮૦ ૧૨૩૪૫) દ્વારા રજૂઆત કરવામાં આવી હતી કે સરસાઈ સીમ વિસ્તારમાં ડીપી બળી જતાં ઘઉં અને જીરુના પાકને પાણી આપવાનું અટકી ગયું છે. તાત્કાલિક નવું ૬૩ KVA ડીપી ફાળવવા વિનંતી.
+              </p>
+            </div>
+
+            <!-- Dynamic Live Stepper Timeline -->
+            <div class="bg-surface-container-low p-6 rounded-2xl mb-6 border border-surface-container">
+              <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider block mb-4">
+                તબક્કાવાર કાર્યવાહી સ્ટેટસ ટ્રેકર
+              </span>
+              <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 relative">
+                <div class="flex flex-col items-center sm:items-start text-center sm:text-left gap-1">
+                  <div class="w-8 h-8 rounded-full bg-green-600 text-on-primary flex items-center justify-center font-bold text-xs mb-1">✓</div>
+                  <span class="font-label-md font-bold text-on-surface">૧. ફરિયાદ નોંધણી</span>
+                  <span class="text-xs text-on-surface-variant">૦૪ માર્ચ, ૧૦:૨૪ AM</span>
+                </div>
+                <div class="flex flex-col items-center sm:items-start text-center sm:text-left gap-1">
+                  <div class="w-8 h-8 rounded-full bg-green-600 text-on-primary flex items-center justify-center font-bold text-xs mb-1">✓</div>
+                  <span class="font-label-md font-bold text-on-surface">૨. કચેરી સમીક્ષા</span>
+                  <span class="text-xs text-on-surface-variant">૦૪ માર્ચ, ૦૪:૩૦ PM</span>
+                </div>
+                <div class="flex flex-col items-center sm:items-start text-center sm:text-left gap-1">
+                  <div class="w-8 h-8 rounded-full bg-on-tertiary-container text-on-tertiary flex items-center justify-center font-bold text-xs mb-1 animate-pulse">૩</div>
+                  <span class="font-label-md font-bold text-on-tertiary-container">૩. ડીપી સામગ્રી રવાના</span>
+                  <span class="text-xs text-on-surface-variant">૦૫ માર્ચ, ૧૧:૦૫ AM</span>
+                </div>
+                <div class="flex flex-col items-center sm:items-start text-center sm:text-left gap-1 opacity-50">
+                  <div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold text-xs mb-1">૪</div>
+                  <span class="font-label-md font-bold text-on-surface">૪. અંતિમ નિરાકરણ</span>
+                  <span class="text-xs text-on-surface-variant">અપેક્ષિત: ૨૪ કલાકમાં</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Logs / History -->
+            <div class="bg-surface-container-lowest rounded-xl">
+              <h5 class="font-label-lg text-label-lg font-bold text-on-surface mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined text-on-tertiary-container text-[20px]">history</span>
+                સત્તાવાર કાર્યવાહી ડાયરી (Action History)
+              </h5>
+              <div class="space-y-3">
+                <div class="flex gap-3 text-body-sm">
+                  <span class="text-outline font-mono text-xs w-32 shrink-0">૦૫ માર્ચ ૧૧:૦૫ AM</span>
+                  <div class="flex-1 bg-surface-container-low p-3 rounded-xl border border-surface-container">
+                    <strong class="text-on-surface block">PGVCL ગોડાઉનમાંથી નવા 63 KVA ટ્રાન્સફોર્મર ફાળવણીની મંજૂરી અપાઈ.</strong>
+                    <span class="text-on-surface-variant text-xs">જૂનાગઢ ડિવિઝનલ સ્ટોર્સમાંથી વાહન દ્વારા સામગ્રી રવાના કરાઈ છે.</span>
+                  </div>
+                </div>
+                <div class="flex gap-3 text-body-sm">
+                  <span class="text-outline font-mono text-xs w-32 shrink-0">૦૪ માર્ચ ૦૪:૩૦ PM</span>
+                  <div class="flex-1 bg-surface-container-low p-3 rounded-xl border border-surface-container">
+                    <strong class="text-on-surface block">ધારાસભ્ય કાર્યાલય દ્વારા કાર્યપાલક ઈજનેરને અધિકૃત પત્ર ઈમેલ કરાયો.</strong>
+                    <span class="text-on-surface-variant text-xs">પત્ર સંદર્ભ: MLA/VIS/GRIEV/401. તાત્કાલિક રીપ્લેસમેન્ટની તાકીદ.</span>
+                  </div>
+                </div>
+                <div class="flex gap-3 text-body-sm">
+                  <span class="text-outline font-mono text-xs w-32 shrink-0">૦૪ માર્ચ ૧૦:૨૪ AM</span>
+                  <div class="flex-1 bg-surface-container-low p-3 rounded-xl border border-surface-container">
+                    <strong class="text-on-surface block">નાગરિક દ્વારા નવી ફરિયાદ ઓનલાઈન પોર્ટલ પર નોંધાઈ.</strong>
+                    <span class="text-on-surface-variant text-xs">ઓટોમેટેડ એકનોલેજમેન્ટ SMS અરજદારના મોબાઈલ પર સફળતાપૂર્વક મોકલાયો.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Constituency Redressal Analytics & Transparency Metrics -->
+        <div class="mt-12 pt-8 border-t border-surface-container">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-2">
+            <div>
+              <span class="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-widest block mb-1">પારદર્શિતા ડેશબોર્ડ</span>
+              <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">વિસાવદર ફરિયાદ નિવારણ આંકડાકીય અહેવાલ</h2>
+            </div>
+            <span class="font-label-sm text-label-sm text-outline">છેલ્લું અપડેટ: આજે સવારે ૦૮:૦૦ વાગ્યે</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-surface-container flex flex-col justify-between">
+              <span class="font-label-md text-label-md font-bold text-on-surface-variant">કુલ નોંધાયેલ ફરિયાદો</span>
+              <div class="my-2">
+                <span class="font-display text-display font-extrabold text-on-surface block">૧,૪૨૮</span>
+                <span class="font-label-sm text-label-sm text-emerald-700 font-semibold flex items-center gap-1 mt-1">
+                  <span class="material-symbols-outlined text-[16px]">trending_up</span> છેલ્લા ૩૦ દિવસમાં +૧૪૨
+                </span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-surface-container flex flex-col justify-between">
+              <span class="font-label-md text-label-md font-bold text-on-surface-variant">સફળતાપૂર્વક નિકાલ</span>
+              <div class="my-2">
+                <span class="font-display text-display font-extrabold text-emerald-700 block">૧,૨૯૬</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block font-medium">૯૦.૭% ફરિયાદ નિરાકરણ દર</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-surface-container flex flex-col justify-between">
+              <span class="font-label-md text-label-md font-bold text-on-surface-variant">હાલ પ્રગતિ હેઠળ</span>
+              <div class="my-2">
+                <span class="font-display text-display font-extrabold text-amber-600 block">૧૩૨</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block font-medium">મોનિટરિંગ હેઠળ</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-surface-container flex flex-col justify-between">
+              <span class="font-label-md text-label-md font-bold text-on-surface-variant">સરેરાશ નિકાલ સમય</span>
+              <div class="my-2">
+                <span class="font-display text-display font-extrabold text-secondary block">૩.૪ દિવસ</span>
+                <span class="font-label-sm text-label-sm text-emerald-700 font-semibold mt-1 block">રાજ્ય સરેરાશ કરતા ૪૫% ઝડપી</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- 3. OFFICIAL GLOBAL FOOTER                                -->
+  <!-- ======================================================== -->
+  <footer class="w-full bg-primary-container text-on-primary text-body-sm font-body-sm border-t border-surface-container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Col 1 -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="material-symbols-outlined text-tertiary-fixed text-[28px]">account_balance</span>
+          <span class="font-headline-sm text-headline-sm text-inverse-on-surface font-bold">વિસાવદર કાર્યાલય</span>
+        </div>
+        <p class="text-on-primary-container leading-relaxed">
+          ગોપાલ ઇટાલિયા જન સેવા કેન્દ્ર, જૂનાગઢ-ધારી હાઇવે રોડ, વિસાવદર, જિલ્લો જૂનાગઢ, ગુજરાત - ૩૬૨૧૩૦.
+        </p>
+        <div class="flex items-center gap-2 text-on-primary-container mt-1">
+          <span class="material-symbols-outlined text-[18px] text-tertiary-fixed">call</span>
+          <span>ટોલ ફ્રી: 1800-233-5500</span>
+        </div>
+        <div class="flex items-center gap-2 text-on-primary-container">
+          <span class="material-symbols-outlined text-[18px] text-tertiary-fixed">mail</span>
+          <span>visavadar.office@gopalitalia.in</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="flex flex-col gap-3">
+        <span class="font-label-lg text-label-lg text-inverse-on-surface font-bold">ઝડપી લિંક્સ (Quick Links)</span>
+        <div class="flex flex-col gap-2 font-label-md text-label-md text-on-primary-container">
+          <a class="hover:text-inverse-on-surface transition-colors" href="about.html">ધારાસભ્ય પરિચય અને વિઝન</a>
+          <a class="hover:text-inverse-on-surface transition-colors" href="development-works.html">ધારાસભ્ય ગ્રાન્ટ અને કામગીરી અહેવાલ</a>
+          <a class="hover:text-inverse-on-surface transition-colors" href="village-directory.html">વિસાવદર-ભેંસાણ ગ્રામ્ય ડિરેક્ટરી</a>
+          <a class="hover:text-inverse-on-surface transition-colors" href="fariyad.html">ઓનલાઇન અરજી ટ્રેકિંગ સિસ્ટમ</a>
+          <a class="hover:text-inverse-on-surface transition-colors" href="suggestion-box.html">મતવિસ્તાર વિકાસ સૂચન પેટી</a>
+        </div>
+      </div>
+
+      <!-- Col 3: Official & Transparency -->
+      <div class="flex flex-col gap-3">
+        <span class="font-label-lg text-label-lg text-inverse-on-surface font-bold">સત્તાવાર &amp; પારદર્શિતા</span>
+        <div class="flex flex-col gap-2 font-label-md text-label-md text-on-primary-container">
+          <a class="hover:text-inverse-on-surface transition-colors" href="https://gujaratindia.gov.in" target="_blank">ગુજરાત સરકાર સત્તાવાર પોર્ટલ</a>
+          <a class="hover:text-inverse-on-surface transition-colors" href="https://kla.gujarat.gov.in" target="_blank">ગુજરાત વિધાનસભા (KLA)</a>
+          <a class="hover:text-inverse-on-surface transition-colors" href="contact.html">માહિતી અધિકાર (RTI Act) સેલ</a>
+          <a class="hover:text-inverse-on-surface transition-colors" href="contact.html">ગોપનીયતા નીતિ (Privacy Policy)</a>
+          <a class="hover:text-inverse-on-surface transition-colors" href="village-directory.html">જિલ્લા પંચાયત &amp; તાલુકા પંચાયત લિંક</a>
+        </div>
+      </div>
+
+      <!-- Col 4: Social Media -->
+      <div class="flex flex-col gap-3">
+        <span class="font-label-lg text-label-lg text-inverse-on-surface font-bold">સત્તાવાર સોશિયલ મીડિયા</span>
+        <p class="text-on-primary-container font-label-sm text-label-sm">
+          મતવિસ્તારના દૈનિક વિકાસકાર્યો અને સત્તાવાર જાહેરાતો માટે જોડાયેલા રહો:
+        </p>
+        <div class="flex items-center gap-2 text-inverse-on-surface mt-1">
+          <a aria-label="Website" class="w-9 h-9 rounded-xl bg-inverse-surface flex items-center justify-center hover:bg-on-tertiary-container hover:text-on-tertiary transition-colors" href="home.html">
+            <span class="material-symbols-outlined text-[20px]">public</span>
+          </a>
+          <a aria-label="YouTube" class="w-9 h-9 rounded-xl bg-inverse-surface flex items-center justify-center hover:bg-on-tertiary-container hover:text-on-tertiary transition-colors" href="https://youtube.com" target="_blank">
+            <span class="material-symbols-outlined text-[20px]">videocam</span>
+          </a>
+          <a aria-label="Facebook" class="w-9 h-9 rounded-xl bg-inverse-surface flex items-center justify-center hover:bg-on-tertiary-container hover:text-on-tertiary transition-colors" href="https://facebook.com" target="_blank">
+            <span class="material-symbols-outlined text-[20px]">forum</span>
+          </a>
+          <a aria-label="Twitter / X" class="w-9 h-9 rounded-xl bg-inverse-surface flex items-center justify-center hover:bg-on-tertiary-container hover:text-on-tertiary transition-colors" href="https://twitter.com" target="_blank">
+            <span class="material-symbols-outlined text-[20px]">share</span>
+          </a>
+        </div>
+        <div class="mt-2 p-2.5 bg-inverse-surface rounded-xl flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-tertiary-fixed text-[20px]">chat</span>
+          <span class="text-xs text-on-primary-fixed">વોટ્સએપ હેલ્પલાઇન સક્રિય છે</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Ribbon -->
+    <div class="bg-primary py-3 text-center text-on-primary-container text-label-sm font-label-sm px-4 sm:px-8 border-t border-inverse-surface">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+        <span>સત્તાવાર જન સંવાદ અને વિકાસ મોનિટરિંગ પોર્ટલ - વિસાવદર વિધાનસભા મતવિસ્તાર (ગુજરાત)</span>
+        <span>© ૨૦૨૫ ગોપાલ ઇટાલિયા કાર્યાલય. સર્વાધિકાર સુરક્ષિત.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Citizen Login Modal -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 hidden" id="loginModal">
+    <div class="bg-surface-container-lowest rounded-2xl max-w-md w-full p-6 shadow-2xl border border-surface-container">
+      <div class="flex items-center justify-between pb-3 border-b border-surface-container">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-[24px]">account_circle</span>
+          <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">નાગરિક સેવા પોર્ટલ લૉગિન</h3>
+        </div>
+        <button class="text-on-surface-variant hover:text-error" onclick="closeLoginModal()">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="py-4 flex flex-col gap-3">
+        <p class="text-body-sm text-on-surface-variant">
+          આપના મોબાઇલ નંબર પર ૪ અંકનો OTP મેળવીને આપની તમામ અરજીઓ, મુલાકાતો અને સૂચનો એક જ જગ્યાએ જુઓ.
+        </p>
+        <div class="flex flex-col gap-1 mt-1">
+          <label class="text-xs font-bold text-on-surface">મોબાઈલ નંબર (Mobile Number):</label>
+          <input class="px-3.5 py-2.5 rounded-xl bg-surface-container-low text-on-surface border border-surface-container focus:outline-none focus:ring-2 focus:ring-secondary text-sm" id="loginPhone" maxlength="10" placeholder="૧૦ અંકનો નંબર દાખલ કરો" type="tel"/>
+        </div>
+        <button class="mt-2 w-full py-2.5 bg-primary-container hover:bg-inverse-surface text-inverse-on-surface rounded-xl font-bold text-sm transition-all" onclick="handleLoginDemo()">
+          OTP મોકલો અને પ્રવેશ કરો
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client-Side JavaScript -->
+  <script>
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileMenuDrawer');
+      const icon = document.getElementById('mobile-menu-icon');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        icon.innerText = 'close';
+      } else {
+        drawer.classList.add('hidden');
+        icon.innerText = 'menu';
+      }
+    }
+
+    let currentScale = 1;
+    function changeFontSize(delta) {
+      if (delta === 0) {
+        currentScale = 1;
+      } else {
+        currentScale += delta * 0.08;
+        if (currentScale < 0.85) currentScale = 0.85;
+        if (currentScale > 1.25) currentScale = 1.25;
+      }
+      document.body.style.fontSize = (16 * currentScale) + 'px';
+    }
+
+    function showLangNotice(lang) {
+      alert(lang + ' ભાષા પોર્ટલ ટૂંક સમયમાં શરૂ કરવામાં આવશે. હાલમાં ગુજરાતી ભાષા સક્રિય છે.');
+    }
+
+    function openLoginModal() {
+      document.getElementById('loginModal').classList.remove('hidden');
+    }
+
+    function closeLoginModal() {
+      document.getElementById('loginModal').classList.add('hidden');
+    }
+
+    function handleLoginDemo() {
+      const phone = document.getElementById('loginPhone').value.trim();
+      if (phone.length === 10) {
+        alert('ડેમો OTP મોકલવામાં આવ્યો છે: 1234\n\nસ્વાગત છે, આપ પોર્ટલ પર સફળતાપૂર્વક લૉગિન થયા છો.');
+        closeLoginModal();
+      } else {
+        alert('કૃપા કરીને માન્ય ૧૦ અંકનો મોબાઈલ નંબર દાખલ કરો.');
+      }
+    }
+
+    // Tab Switching Functionality
+    function switchGrievanceTab(tab) {
+      const registerBtn = document.getElementById('tab-btn-register');
+      const trackBtn = document.getElementById('tab-btn-track');
+      const registerPanel = document.getElementById('grievance-panel-register');
+      const trackPanel = document.getElementById('grievance-panel-track');
+
+      if (tab === 'register') {
+        registerPanel.classList.remove('hidden');
+        trackPanel.classList.add('hidden');
+
+        registerBtn.className = "flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-headline-sm text-headline-sm transition-all bg-on-tertiary-container text-on-tertiary shadow-sm font-bold";
+        trackBtn.className = "flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-headline-sm text-headline-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-semibold";
+      } else {
+        registerPanel.classList.add('hidden');
+        trackPanel.classList.remove('hidden');
+
+        trackBtn.className = "flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-headline-sm text-headline-sm transition-all bg-on-tertiary-container text-on-tertiary shadow-sm font-bold";
+        registerBtn.className = "flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-headline-sm text-headline-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-semibold";
+      }
+    }
+
+    // Character Counter Helper
+    function updateCharCount(textarea) {
+      const counter = document.getElementById('char-counter');
+      const length = textarea.value.length;
+      counter.innerText = length + ' / 800 અક્ષરો';
+      if (length >= 750) {
+        counter.classList.add('text-error');
+        counter.classList.remove('text-outline');
+      } else {
+        counter.classList.remove('text-error');
+        counter.classList.add('text-outline');
+      }
+    }
+
+    // Dynamic Village Filter based on Taluka
+    function filterVillages(taluka) {
+      const villageSelect = document.getElementById('village-select');
+      villageSelect.innerHTML = '';
+      
+      if (taluka === 'bhesan') {
+        const bhesanVillages = [
+          { val: '', text: 'ભેંસાણ તાલુકાનું ગામ પસંદ કરો...' },
+          { val: 'bhesan_city', text: 'ભેંસાણ મુખ્ય શહેર (Bhesan)' },
+          { val: 'chuda', text: 'ચૂડા (Chuda)' },
+          { val: 'morwada', text: 'મોરવાડા (Morwada)' },
+          { val: 'dudhiya', text: 'દૂધિયા (Dudhiya)' },
+          { val: 'khambha', text: 'ખાંભા (Khambha)' },
+          { val: 'parab_vavdi', text: 'પરબ વાવડી (Parab Vavdi)' },
+          { val: 'ranpur', text: 'રાણપુર (Ranpur)' },
+          { val: 'other_bhesan', text: 'અન્ય સીમ વિસ્તાર' }
+        ];
+        bhesanVillages.forEach(v => {
+          const opt = document.createElement('option');
+          opt.value = v.val;
+          opt.innerText = v.text;
+          villageSelect.appendChild(opt);
+        });
+      } else {
+        const visavadarVillages = [
+          { val: '', text: 'વિસાવદર તાલુકાનું ગામ પસંદ કરો...' },
+          { val: 'visavadar_city', text: 'વિસાવદર શહેર (Visavadar Proper)' },
+          { val: 'moti_monpari', text: 'મોટી મોણપરી (Moti Monpari)' },
+          { val: 'sarsai', text: 'સરસઈ (Sarsai)' },
+          { val: 'chhelana', text: 'છેલાણા (Chhelana)' },
+          { val: 'ravani', text: 'રાવણી (Ravani)' },
+          { val: 'kalavad', text: 'કાલાવડ (ગિર) (Kalavad Gir)' },
+          { val: 'dhareshwar', text: 'ધારેશ્વર (Dhareshwar)' },
+          { val: 'amrutvel', text: 'અમૃતવેલ (Amrutvel)' },
+          { val: 'other', text: 'અન્ય સીમ વિસ્તાર' }
+        ];
+        visavadarVillages.forEach(v => {
+          const opt = document.createElement('option');
+          opt.value = v.val;
+          opt.innerText = v.text;
+          villageSelect.appendChild(opt);
+        });
+      }
+    }
+
+    // File Upload Preview
+    function handleFileSelection(input) {
+      const preview = document.getElementById('file-list-preview');
+      preview.innerHTML = '';
+      if (input.files && input.files.length > 0) {
+        for (let i = 0; i < input.files.length; i++) {
+          const span = document.createElement('span');
+          span.className = "bg-surface-variant text-on-secondary-fixed-variant px-3 py-1 rounded-lg inline-flex items-center gap-1 shadow-sm";
+          span.innerHTML = '<span class="material-symbols-outlined text-[14px]">attachment</span> ' + input.files[i].name;
+          preview.appendChild(span);
+        }
+      }
+    }
+
+    // OTP Demo Notification
+    function sendOtpNotice() {
+      const phone = document.getElementById('citizen-phone').value;
+      const helpText = document.getElementById('otp-help-text');
+      if (phone && phone.length === 10) {
+        helpText.innerText = 'તમારા નંબર ' + phone + ' પર ૪-અંકનો OTP મોકલવામાં આવ્યો છે (ડેમો કોડ: ૧૨૩૪).';
+        helpText.className = 'font-label-sm text-label-sm text-emerald-700 font-bold mt-0.5';
+      } else {
+        alert('કૃપા કરીને પહેલા તમારો ૧૦ અંકનો માન્ય મોબાઈલ નંબર દાખલ કરો.');
+      }
+    }
+
+    // Handle Grievance Submit Demo
+    function handleGrievanceSubmit(e) {
+      e.preventDefault();
+      const token = 'VIS-2025-' + Math.floor(1000 + Math.random() * 9000);
+      alert('તમારી ફરિયાદ સફળતાપૂર્વક નોંધાઈ ગઈ છે!\n\nફરિયાદ ટોકન નંબર: #' + token + '\nતમારા મોબાઈલ નંબર પર સત્તાવાર SMS મોકલી દેવાયો છે.');
+      
+      document.getElementById('tracking-input').value = token;
+      document.getElementById('resTokenDisplay').innerText = 'ફરિયાદ ક્રમાંક: #' + token;
+      switchGrievanceTab('track');
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    }
+
+    // Tracking Action
+    function performTrackingSearch() {
+      const query = document.getElementById('tracking-input').value.trim();
+      if (!query) {
+        alert('કૃપા કરીને માન્ય ફરિયાદ નંબર અથવા મોબાઈલ દાખલ કરો.');
+        return;
+      }
+      document.getElementById('resTokenDisplay').innerText = 'ફરિયાદ ક્રમાંક: #' + query;
+      const resultBox = document.getElementById('tracking-result-container');
+      resultBox.classList.remove('hidden');
+      resultBox.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Auto-check URL query parameters
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get('token');
+      if (token) {
+        document.getElementById('tracking-input').value = token;
+        switchGrievanceTab('track');
+        performTrackingSearch();
+      }
+    });
+  </script>
+
+</body>
+</html>
